@@ -113,6 +113,9 @@ h4{
         @media screen and (max-width: 840px){
             right: -320px;
         }
+        @media screen and (max-width: 720px){
+            right: -380px;
+        }
         @media screen and (max-width: 480px){
             right: -460px;
         }
@@ -191,6 +194,7 @@ h4{
             width: 250px;
             height: 180px;
             margin: 0;
+            align-self: center;
         }
     }
 }
@@ -506,7 +510,7 @@ h4{
         @media screen and (max-width: 1200px){
             margin-top: -100px;
         }
-        @media screen and (max-width: 480px){
+        @media screen and (max-width: 720px){
             margin: 0;
         }
         &:nth-child(1){
@@ -558,20 +562,22 @@ h4{
             margin-bottom: -120px;
             @media screen and (max-width: 1200px){ margin-bottom: -100px; }
             @media screen and (max-width: 840px){ margin: 80px 0 -90px 0; }
-            @media screen and (max-width: 720px){ margin: -50px 0 0 0; }
+            @media screen and (max-width: 720px){ margin: 0; }
+            @media screen and (max-width: 480px){ margin: -50px 0 0 0; }
         }
         &:nth-child(3){
             grid-area: t;
             margin-left: 20px;
             @media screen and (max-width: 1200px){ margin-left: -50px; }
             @media screen and (max-width: 840px){ margin: 10px 0 0 -15px; }
-            @media screen and (max-width: 720px){ margin: 0px 0 0 0; }
+            @media screen and (max-width: 720px){ margin: 0; }
         }
         &:nth-child(4){
             margin-top: -120px;
             @media screen and (max-width: 1200px){ margin-top: -130px; }
             @media screen and (max-width: 840px){ margin:  -80px 0 0 0; }
-            @media screen and (max-width: 720px){ margin: -20px 0 0 0; }
+            @media screen and (max-width: 720px){ margin: 0; }
+            @media screen and (max-width: 480px){ margin: -20px 0 0 0; }
             grid-area: s;
         }
     }
