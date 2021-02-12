@@ -16,6 +16,10 @@ body{
     line-height: 136%;
     font-size: 16px;
     color: $main-color;
+    @media screen and (max-width: 720px){
+        font-size: 14px;
+        line-height: 130%;
+    }
 }
 ul, li{
     list-style: none;
@@ -26,9 +30,21 @@ h1, h2, h3, h4{
 }
 h1{
     font-size: 72px;
+    @media screen and (max-width: 840px){
+        font-size: 60px;
+    }
+    @media screen and (max-width: 720px){
+        font-size: 55px;
+    }
 }
 h2{
     font-size: 68px;
+    @media screen and (max-width: 840px){
+        font-size: 55px;
+    }
+    @media screen and (max-width: 720px){
+        font-size: 45px;
+    }
 }
 h3{
     font-size: 24px;
@@ -37,29 +53,37 @@ h4{
     font-size: 18px;
 }
 .container {
+    border: 1px dotted #ff000070;
     position: relative;
     width: 1140px;
     left: 50%;
     transform: translate(-50%);
+    @media screen and (max-width: 1200px){
+        width: 720px;
+    }
+    @media screen and (max-width: 840px){
+        width: 560px;
+    }
+    @media screen and (max-width: 720px){
+        width: 460px;
+    }
+    @media screen and (max-width: 480px){
+        width: 280px;
+    }
 }
 
 .header {
     position: relative;
-    background-color: $first-screen-bg;
+    background: $first-screen-bg;
+    background: linear-gradient(180deg, $first-screen-bg 86%, rgba(255,255,255,0) 100%);
     padding-top: 22px;
-    &__logo{
-        width: 194px;
-        height: 85px;
-    }
-    .header-logo-wrapper{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+
     overflow-x: hidden;
     &__decor-1,
     &__decor-2,
     &__decor-3{
+        display: flex;
+        align-items: flex-end;
         position: absolute;
         object-position: left;
         object-fit: contain;
@@ -68,6 +92,9 @@ h4{
         width: 1150px;
         height: 810px;
         z-index: -1;
+        @media screen and (max-width: 1200px){
+            left: -270px;
+        }
     }
     &__decor-2{
         left: auto;
@@ -75,17 +102,36 @@ h4{
         right: -480px;
         width: 1050px;
         bottom: 20px;
+        @media screen and (max-width: 1280px){
+            right: -400px;
+        }
+        @media screen and (max-width: 1200px){
+            right: -360px;
+            width: 860px;
+            height: 1300px;
+        }
+        @media screen and (max-width: 840px){
+            right: -320px;
+        }
+        @media screen and (max-width: 480px){
+            right: -460px;
+        }
     }
     &__decor-3{
+        height: 150px;
+        background: rgb(255,255,255);
+        background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
         left: 0;
         top: auto;
         position: absolute;
-        object-position: bottom;
-        object-fit: contain;
         width: 100%;
-        height: 150px;
         z-index: 1;
         bottom: 0;
+        img{
+            object-position: bottom;
+            object-fit: cover;
+            width: 100%;
+        }
     }
     &__offer{
         margin-top: 15px;
@@ -99,45 +145,162 @@ h4{
     display: grid;
     grid-template-areas: 't i' 's i';
     max-width: 642px;
+    @media screen and (max-width: 1200px){
+        max-width: unset;
+        margin-top: 10px;
+    }
+    @media screen and (max-width: 480px){
+        grid-template-areas: 't' 's' 'i';
+    }
+    @media screen and (max-width: 480px){
+        width: 280px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
     .offer__title{
         grid-area: t;
     }
     .offer__sub-title{
         grid-area: s;
+        white-space: nowrap;
+        @media screen and (max-width: 720px){
+            white-space: normal;
+        }
     }
     .offer__logo{
         grid-area: i;
-        margin-top: -15px;
+        margin-top: -10px;
         width: 250px;
         height: 180px;
         object-fit: contain;
         object-position: center;
+        @media screen and (max-width: 1200px){
+            justify-self: flex-end;
+            height: 185px;
+        }
+        @media screen and (max-width: 840px){
+            margin-right: -70px;
+        }
+        @media screen and (max-width: 720px){
+            width: 180px;
+            height: 140px;
+            margin: 0;
+        }
+        @media screen and (max-width: 480px){
+            width: 250px;
+            height: 180px;
+            margin: 0;
+        }
     }
 }
 .offer {
+    display: grid;
     &__sub-title{
         line-height: 100%;
         font-weight: 300;
         margin-top: -25px;
         margin-bottom: 15px;
+        @media screen and (max-width: 480px){
+            margin-top: -15px;
+            margin-bottom: 20px;
+        }
     }
     &__description{
+        grid-area: d;
         max-width: 540px;
+        @media screen and (max-width: 1200px){
+            min-width: 540px;
+            max-width: unset;
+        }
+        @media screen and (max-width: 720px){
+            min-width: 460px;
+            max-width: unset;
+        }
+        @media screen and (max-width: 480px){
+            min-width: 280px;
+            width: 280px;
+            margin-top: 25px;
+        }
     }
     &__theses {
         margin-top: 33px;
         margin-left: 29px;
         display: grid;
         grid-template-areas: 'f s' 'f t';
+        @media screen and (max-width: 1200px){
+            margin-top: 70px;
+        }
+        @media screen and (max-width: 840px){
+            display: flex;
+            flex-direction: column;
+            margin-top: 0;
+        }
     }
     &__text{
         font-size: 18px;
     }
+    grid-template-areas: 'l a' 't form' 'd form' 'f form';
+    @media screen and (max-width: 1200px){
+        grid-template-areas: 'l a' 't t' 'd d' 'f form';
+    }
+    @media screen and (max-width: 840px){
+        grid-template-areas: 'l a a' 't t t' 'd d d' 'f f f' 'form form form';
+    }
+    @media screen and (max-width: 720px){
+        width: 460px;
+    }
+    @media screen and (max-width: 480px){
+        grid-template-areas: 'a' 'l' 't' 'f' 'd' 'form';
+    }
+    &__logo-head{
+        width: 194px;
+        height: 85px;
+        grid-area: l;
+        @media screen and (max-width: 720px){
+            width: 150px;
+            height: 75px;
+        }
+        @media screen and (max-width: 480px){
+            justify-self: left;
+        }
+    }
+    &__awards{
+        grid-area: a;
+        align-items: flex-start;
+        justify-self: end;
+        @media screen and (max-width: 480px){
+            justify-self: left;
+        }
+    }
+    .head-wrapper{
+        grid-area: t;
+    }
+    &__features{
+        grid-area: f;
+    }
+    &__form{
+        grid-area: form;
+        @media screen and (max-width: 1200px){
+           margin-left: -30px;
+        }
+    }
 }
 .form {
-    margin-top: 100px;
+    margin-top: 85px;
+
+    @media screen and (max-width: 1200px){
+        margin-top: 33px;
+    }
+    @media screen and (max-width: 840px){
+        margin-top: 50px;
+        margin-left: 0;
+    }
     margin-bottom: 130px;
     width: 315px;
+    @media screen and (max-width: 480px){
+        width: 250px;
+    }
     padding: 23px 15px;
     background-color: #F3F3F3;
     box-shadow: 5px 4px 11px 6px rgba(4, 80, 104, 0.08);
@@ -324,21 +487,91 @@ h4{
     max-width: 560px;
     display: grid;
     grid-template-areas: 'i f .' 'i . t' 'i s .';
+    @media screen and (max-width: 1200px){
+        grid-template-areas: 'i i' 'f .' '. t' 's .';
+    }
+    @media screen and (max-width: 840px){
+        grid-template-areas: 'i f .' 'i . t' 'i s .';
+    }
+    @media screen and (max-width: 720px){
+        grid-template-areas: 'i f' 'i s' 'i t';
+    }
+    @media screen and (max-width: 480px){
+        grid-template-areas: 'i i i' 'f s t';
+    }
+    @media screen and (max-width: 480px){
+        width: 280px;
+    }
     &__item {
+        @media screen and (max-width: 1200px){
+            margin-top: -100px;
+        }
+        @media screen and (max-width: 480px){
+            margin: 0;
+        }
         &:nth-child(1){
             grid-area: i;
             margin-top: -45px;
             margin-right: 35px;
+            @media screen and (max-width: 1200px){
+                margin-top: 25px;
+                justify-self: start;
+                margin-right: 10px;
+                img{
+                    width: 300px;
+                    height: 380px;
+                    object-fit: contain;
+                    object-position: center;
+                }
+            }
+            @media screen and (max-width: 840px){
+                margin-top: 10px;
+                justify-self: start;
+                margin-right: -30px;
+                img{
+                    width: 270px;
+                    height: 360px;
+                    object-fit: contain;
+                    object-position: center;
+                }
+            }
+            @media screen and (max-width: 720px){
+                margin-top: -30px;
+                justify-self: start;
+                margin-right: -30px;
+                img{
+                    width: 290px;
+                    height: 420px;
+                    object-fit: contain;
+                    object-position: center;
+                }
+            }
+            @media screen and (max-width: 480px){
+                img{
+                    width: 280px;
+                    height: 380px;
+                }
+            }
         }
         &:nth-child(2){
             grid-area: f;
-            margin-bottom: -100px;
+            margin-bottom: -120px;
+            @media screen and (max-width: 1200px){ margin-bottom: -100px; }
+            @media screen and (max-width: 840px){ margin: 80px 0 -90px 0; }
+            @media screen and (max-width: 720px){ margin: -50px 0 0 0; }
         }
         &:nth-child(3){
             grid-area: t;
+            margin-left: 20px;
+            @media screen and (max-width: 1200px){ margin-left: -50px; }
+            @media screen and (max-width: 840px){ margin: 10px 0 0 -15px; }
+            @media screen and (max-width: 720px){ margin: 0px 0 0 0; }
         }
         &:nth-child(4){
-            margin-top: -100px;
+            margin-top: -120px;
+            @media screen and (max-width: 1200px){ margin-top: -130px; }
+            @media screen and (max-width: 840px){ margin:  -80px 0 0 0; }
+            @media screen and (max-width: 720px){ margin: -20px 0 0 0; }
             grid-area: s;
         }
     }
@@ -353,8 +586,16 @@ h4{
     justify-content: center;
     font-family: 'Oswald';
     font-weight: bold;
-    font-size: 18px;
+    font-size: 12px;
     color: #fff;
+    @media screen and (max-width: 720px){ 
+        width: 100px;
+        height: 100px;
+    }
+    @media screen and (max-width: 480px){ 
+        width: 80px;
+        height: 80px;
+    }
 }
 
 .theses {
@@ -363,6 +604,7 @@ h4{
         &:nth-child(1){
             grid-area: f;
             margin-right: 66px;
+            
         }
         &:nth-child(2){
             grid-area: s;
@@ -383,19 +625,60 @@ h4{
             background: url('../assets/icons/ICON__FLAG.svg') no-repeat center / contain;
             z-index: -1;
         }
+        @media screen and (max-width: 840px){
+            &:nth-child(1){
+                margin: 46px 0 0 0;
+            }
+            &:nth-child(2),
+            &:nth-child(3){
+                margin: 30px 0 0 0;
+            }
+        }
     }
 }
 .these {
     max-width: 219px;
+    @media screen and (max-width: 840px){
+        max-width: unset;
+    }
 }
 
 
 .awards {
     display: flex;
     margin-right: 175px;
+    margin-top: 20px;
+    @media screen and (max-width: 1200px){
+        margin-right: 0;
+    }
+    @media screen and (max-width: 480px){
+        margin: 0;
+    }
     &__item {
         &:not(:last-child){
-            margin-right: 14px;
+            margin-right: 20px;
+            @media screen and (max-width: 1200px){
+                margin-right: 14px;
+            }
+            @media screen and (max-width: 840px){
+                margin-right: 25px;
+            }
+            @media screen and (max-width: 720px){
+                margin-right: 5px;
+            }
+        }
+        @media screen and (max-width: 840px){
+            img{
+                object-fit: contain;
+                object-position: center;
+            }
+            width: 54px;
+        }
+        @media screen and (max-width: 720px){
+            img{
+                width: 45px;
+                object-fit: contain;
+            }
         }
     }
 }
