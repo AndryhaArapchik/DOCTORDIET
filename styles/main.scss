@@ -7,6 +7,12 @@
 }
 .accent{
     color: $blue;
+    &.red{
+        color: $red;
+    }
+    &.green{
+        color: $green;
+    }
 }
 body{
     font-style: normal;
@@ -53,7 +59,7 @@ h4{
     font-size: 18px;
 }
 .container {
-   //border: 1px dotted #ff000070;
+    border: 1px dotted #ff000070;
     position: relative;
     width: 1140px;
     left: 50%;
@@ -226,6 +232,50 @@ h4{
             width: 280px;
             margin-top: 25px;
         }
+        .theses {
+            &__item {
+                position: relative;
+                &:nth-child(1){
+                    grid-area: f;
+                    margin-right: 66px;
+                    
+                }
+                &:nth-child(2){
+                    grid-area: s;
+                }
+                &:nth-child(3){
+                    margin-top: 65px;
+                    grid-area: t;
+                }
+                
+                &::before{
+                    content: '';
+                    margin-top: -25px;
+                    transform: translateX(-100%);
+                    margin-left: 5px;
+                    position: absolute;
+                    width: 34px;
+                    height: 42px;
+                    background: url('../assets/icons/ICON__FLAG.svg') no-repeat center / contain;
+                    z-index: -1;
+                }
+                @media screen and (max-width: 840px){
+                    &:nth-child(1){
+                        margin: 46px 0 0 0;
+                    }
+                    &:nth-child(2),
+                    &:nth-child(3){
+                        margin: 30px 0 0 0;
+                    }
+                }
+            }
+        }
+        .these {
+            max-width: 219px;
+            @media screen and (max-width: 840px){
+                max-width: unset;
+            }
+        }
     }
     &__theses {
         margin-top: 33px;
@@ -290,6 +340,57 @@ h4{
         }
     }
 }
+span.bold{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000;
+    text-transform: uppercase;
+}
+.button{
+    font-family: 'Oswald';
+    color: #fff;
+    text-transform: uppercase;
+    outline: none;
+    padding: 17px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    background: $main-gradient;
+    font-family: 'Open Sans';
+    position: relative;
+    z-index: 1;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important; 
+    -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important; 
+    outline: none !important;
+}
+.button-wrapper{
+    margin-top: 20px;
+    z-index: 10;
+    position: relative;
+    &:hover .button{
+        bottom: 1px;
+    }
+    &:active .button{
+        bottom: -2px;
+    }
+    .button-decor{
+        transition: all .2s ease-in-out;
+        width: 100%;
+        height: 100%;
+        background: #15700D;
+        position: absolute;
+        left: 0;
+        top: auto;
+        border-radius: 30px;
+        bottom: -3px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+}
 .form {
     margin-top: 85px;
 
@@ -334,46 +435,6 @@ h4{
     }
     &__timer {
         margin-top: 10px;
-    }
-    &__button{
-        font-family: 'Oswald';
-        color: #fff;
-        text-transform: uppercase;
-        outline: none;
-        padding: 17px 20px;
-        border-radius: 30px;
-        font-weight: bold;
-        font-size: 18px;
-        border: none;
-        background: $main-gradient;
-        font-family: 'Open Sans';
-        position: relative;
-        z-index: 1;
-        transition: all .3s ease-in-out;
-        cursor: pointer;
-    }
-    .button-wrapper{
-        margin-top: 20px;
-        z-index: 10;
-        position: relative;
-        &:hover .form__button{
-            bottom: 1px;
-        }
-        &:active .form__button{
-            bottom: -2px;
-        }
-        .button-decor{
-            transition: all .2s ease-in-out;
-            width: 100%;
-            height: 100%;
-            background: #15700D;
-            position: absolute;
-            left: 0;
-            top: auto;
-            border-radius: 30px;
-            bottom: -3px;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        }
     }
     &__info{
         font-size: 11px;
@@ -604,50 +665,7 @@ h4{
     }
 }
 
-.theses {
-    &__item {
-        position: relative;
-        &:nth-child(1){
-            grid-area: f;
-            margin-right: 66px;
-            
-        }
-        &:nth-child(2){
-            grid-area: s;
-        }
-        &:nth-child(3){
-            margin-top: 65px;
-            grid-area: t;
-        }
-        
-        &::before{
-            content: '';
-            margin-top: -25px;
-            transform: translateX(-100%);
-            margin-left: 5px;
-            position: absolute;
-            width: 34px;
-            height: 42px;
-            background: url('../assets/icons/ICON__FLAG.svg') no-repeat center / contain;
-            z-index: -1;
-        }
-        @media screen and (max-width: 840px){
-            &:nth-child(1){
-                margin: 46px 0 0 0;
-            }
-            &:nth-child(2),
-            &:nth-child(3){
-                margin: 30px 0 0 0;
-            }
-        }
-    }
-}
-.these {
-    max-width: 219px;
-    @media screen and (max-width: 840px){
-        max-width: unset;
-    }
-}
+
 
 
 .awards {
@@ -699,10 +717,137 @@ h4{
 }
 .footer {
 }
+
+//ANSWERS
 .answers {
-    height: 100vh;
-    background: #fff;
+    margin-top: 175px;
+    &__card {
+
+    }
+    &__resume {
+        align-self: center;
+    }
 }
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.answers-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:nth-child(2){  
+        margin-top: 30px;
+        flex-direction: column;
+    }
+    .button-wrapper{
+        margin-top: 30px;
+    }
+}
+.card {
+    width: 555px;
+    &-luck{
+        .blank {
+            background: $main-gradient;
+            &__image {
+                left: auto;
+                right: 0;
+                bottom: 0;
+            }
+        }
+        align-self: flex-end;
+        .card__title{
+            text-align: end;
+            margin-left: 90px;
+        }
+    }
+    &-failures{
+        .blank {
+            justify-content: flex-end;
+        }
+        .card__title{
+            margin-left: 230px;
+        }
+    }
+    &__title {
+        margin-bottom: 50px;
+        max-width: 260px;
+        h2{
+            font-size: 40px;
+            line-height: 44px;
+            &:nth-child(1){
+                
+            }
+            &:nth-child(1){
+                
+            }
+        }
+    }
+    &__blank {
+        
+    }
+    &__sub-title {
+        margin-bottom: 20px;
+        font-family: 'Oswald';
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 130%;
+        text-transform: uppercase;
+    }
+    .theses {
+        &__item {
+            &:nth-child(2){
+                margin-top: 30px;
+                margin-left: 50px;
+            }
+        }
+    }
+}
+.accent {
+}
+.blank {
+    background: $orange-gradient;
+    box-shadow: 8px 10px 33px 3px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 30px;
+    &__image {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 260px;
+    }
+    &__decor {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 150px;
+        color: #fff;
+        margin-right: -15px;
+        margin-top: -5px;
+    }
+    &__body {
+        margin: 28px 20px;
+        line-height: 130%;
+        color: #FFFFFF;
+        font-weight: 700;
+        font-size: 15px;
+    }
+
+}
+
+.bold {
+    font-weight: 700;
+}
+.button-wrapper {
+}
+.button {
+}
+.button-decor {
+}
+
 .advantages {
 }
 .courses {
