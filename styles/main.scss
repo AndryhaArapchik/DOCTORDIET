@@ -720,7 +720,7 @@ span.bold{
 //ANSWERS
 .answers {
     @media screen and (max-width: 570px){
-        overflow-x: hidden;
+        overflow: hidden;
         padding-top: 45px;
         margin-top: 130px;
     }
@@ -870,8 +870,6 @@ span.bold{
         }
     }
 }
-.accent {
-}
 .blank {
     @media screen and (max-width: 570px){
         width: 570px;
@@ -947,20 +945,119 @@ span.bold{
 .bold {
     font-weight: 700;
 }
-.button-wrapper {
-}
-.button {
-}
-.button-decor {
-}
 
-.advantages {
-}
-.courses {
-}
-.reviews {
-}
-.weight {
-}
-.summary {
+.advantages{
+    &__title{
+        margin-top: 100px;
+        width: 550px;
+        text-align: end;  
+        
+        h3{
+            font-size: 36px;
+            line-height: 110%;
+            &:not(.accent){
+                font-weight: normal;
+            }
+        }
+    }
+    &__image{
+        width: 410px;
+        height: 550px;
+        object-fit: contain;
+        object-position: center;
+    }
+    &__decor{
+        position: absolute;
+        margin-top: -220px;
+        margin-left: 150px;
+        width: 900px;
+        height: 900px;
+        object-fit: contain;
+        object-position: center;
+    }
+    .container{
+
+    }
+    &-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 55px;
+        position: relative;
+    }
+    &-inner{
+        
+    }
+    &__list {
+        position: absolute;
+        top: 0;
+    }
+
+    .advantages-list {
+        &__item {
+            width: 160px;
+            position: relative;
+            margin-top: 130px;
+            text-align: center;
+            font-family: 'Oswald';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 110%;
+            &::after{
+                position: absolute;
+                content: attr(data-id);
+                font-weight: bold;
+                font-size: 48px;
+                line-height: 110%;
+                color: #fff;
+                left: 50%;
+                transform: translate(-50%);
+                top: -90px;
+                z-index: 100;
+                margin-left: 3px;
+                font-family: 'Oswald';
+            }
+            &::before{
+                position: absolute;
+                content: '';
+                background: url('../assets/icons/ICON__ITEM.png') no-repeat center / contain;
+                width: 150px;
+                height: 130px;
+                font-weight: bold;
+                font-size: 48px;
+                line-height: 110%;
+                color: #fff;
+                top: -130px;
+                left: 50%;
+                transform: translate(-50%);
+            }
+            &:nth-child(1){
+                margin-left: -100px;
+                margin-top: 100px;
+            }
+            &:nth-child(2){
+                margin-left: -180px;
+            }
+            &:nth-child(3){
+                margin-left: -200px;
+                margin-top: 190px;
+            }
+            &:nth-child(4){
+                margin-left: -100px;
+            }
+            &:nth-child(5){
+                margin-top: -600px;
+            }
+            &:nth-child(6){
+                
+            }
+            &:nth-child(7){
+                
+            }
+            &:nth-child(8){
+                
+            }
+        }
+    }    
 }

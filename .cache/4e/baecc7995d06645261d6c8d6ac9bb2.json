@@ -1,1 +1,1 @@
-{"id":"assets/fonts/Robotolight.woff2","dependencies":[],"generated":{"js":"module.exports=\"/7c6bb0b1d34e58c205ecf1b6a4c14103.woff2\";"},"sourceMaps":null,"error":null,"hash":"38e1ed9a9ee49d755d20226b0d66588c","cacheData":{}}
+{"id":"assets/fonts/Robotolight.woff2","dependencies":[{"name":"C:\\Users\\Admin\\source\\repos\\DOCTORDIET\\package.json","includedInParent":true,"mtime":1613142422937}],"generated":{"js":"module.exports = \"/7c6bb0b1d34e58c205ecf1b6a4c14103.woff2\";"},"sourceMaps":null,"error":null,"hash":"38e1ed9a9ee49d755d20226b0d66588c","cacheData":{"env":{}}}

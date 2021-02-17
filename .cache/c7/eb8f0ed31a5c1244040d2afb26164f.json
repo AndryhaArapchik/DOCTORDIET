@@ -1,1 +1,1 @@
-{"id":"assets/fonts/Oswaldregular.ttf","dependencies":[],"generated":{"js":"module.exports=\"/59e94bd114821b2b8798b7bcce9b4e6a.ttf\";"},"sourceMaps":null,"error":null,"hash":"4647c1d949e48ef298602d6f23da49cf","cacheData":{}}
+{"id":"assets/fonts/Oswaldregular.ttf","dependencies":[{"name":"C:\\Users\\Admin\\source\\repos\\DOCTORDIET\\package.json","includedInParent":true,"mtime":1613142422937}],"generated":{"js":"module.exports = \"/59e94bd114821b2b8798b7bcce9b4e6a.ttf\";"},"sourceMaps":null,"error":null,"hash":"4647c1d949e48ef298602d6f23da49cf","cacheData":{"env":{}}}

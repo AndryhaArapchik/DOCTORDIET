@@ -1,1 +1,1 @@
-{"id":"assets/fonts/Robotomedium.woff2","dependencies":[],"generated":{"js":"module.exports=\"/93cecdde569205fabef54032f70da1c8.woff2\";"},"sourceMaps":null,"error":null,"hash":"4a34361b26e9896ea1b5065708f8daea","cacheData":{}}
+{"id":"assets/fonts/Robotomedium.woff2","dependencies":[{"name":"C:\\Users\\Admin\\source\\repos\\DOCTORDIET\\package.json","includedInParent":true,"mtime":1613142422937}],"generated":{"js":"module.exports = \"/93cecdde569205fabef54032f70da1c8.woff2\";"},"sourceMaps":null,"error":null,"hash":"4a34361b26e9896ea1b5065708f8daea","cacheData":{"env":{}}}
