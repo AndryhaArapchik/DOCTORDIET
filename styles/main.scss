@@ -947,6 +947,7 @@ span.bold{
 }
 
 .advantages{
+    overflow-x: hidden;
     &__title{
         margin-top: 100px;
         width: 550px;
@@ -959,12 +960,24 @@ span.bold{
                 font-weight: normal;
             }
         }
+        @media screen and (max-width: 765px){
+            width: 530px;
+        }
+        @media screen and (max-width: 568px){
+            width: 280px;
+            h3{
+                font-size: 24px;
+            }
+        }
     }
     &__image{
-        width: 410px;
-        height: 550px;
-        object-fit: contain;
-        object-position: center;
+        @media screen and (max-width: 568px){
+            img{
+                width: 280px;
+                object-fit: contain;
+                object-position: center;
+            }
+        }
     }
     &__decor{
         position: absolute;
@@ -974,9 +987,29 @@ span.bold{
         height: 900px;
         object-fit: contain;
         object-position: center;
+        @media screen and (max-width: 1200px){
+            margin-top: -60px;
+            margin-left: 550px;
+            height: 870px;
+        }
+        @media screen and (max-width: 765px){
+            margin-top: -200px;
+            height: 810px;
+            margin-left: 120px;
+        }
+        @media screen and (max-width: 576px){
+            margin-top: -150px;
+            height: 710px;
+        }
     }
     .container{
-
+        height: 1100px;
+        @media screen and (max-width: 765px){
+            height: 1600px;
+        }
+        @media screen and (max-width: 576px){
+            height: 1400px;
+        }
     }
     &-wrapper{
         display: flex;
@@ -984,15 +1017,31 @@ span.bold{
         justify-content: center;
         margin-top: 55px;
         position: relative;
-    }
-    &-inner{
-        
+        @media screen and (max-width: 1200px){
+            margin-top: 100px;
+        }
+        @media screen and (max-width: 765px){
+            margin-top: 270px;
+        }
     }
     &__list {
         position: absolute;
         top: 0;
     }
-
+    &__button{
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        margin-left: 15px;
+        transform: translate(-50%);
+        @media screen and (max-width: 1200px){
+            bottom: -100px;
+            margin-left: 0;
+        }
+        @media screen and (max-width: 765px){
+            bottom: -470px;
+        }
+    }
     .advantages-list {
         &__item {
             width: 160px;
@@ -1004,6 +1053,13 @@ span.bold{
             font-weight: normal;
             font-size: 16px;
             line-height: 110%;
+            @media screen and (max-width: 1200px){
+                width: 140px;
+            }
+            @media screen and (max-width: 765px){
+                width: 120px;
+                font-size: 14px;
+            }
             &::after{
                 position: absolute;
                 content: attr(data-id);
@@ -1017,46 +1073,171 @@ span.bold{
                 z-index: 100;
                 margin-left: 3px;
                 font-family: 'Oswald';
+                @media screen and (max-width: 568px){
+                    font-size: 32px;
+                    top: -62px;
+                }
             }
             &::before{
                 position: absolute;
                 content: '';
                 background: url('../assets/icons/ICON__ITEM.png') no-repeat center / contain;
-                width: 150px;
-                height: 130px;
+                width: 180px;
+                height: 170px;
                 font-weight: bold;
                 font-size: 48px;
                 line-height: 110%;
                 color: #fff;
-                top: -130px;
+                top: -150px;
                 left: 50%;
                 transform: translate(-50%);
+                @media screen and (max-width: 568px){
+                    width: 100px;
+                    top: -130px;
+                }
             }
             &:nth-child(1){
-                margin-left: -100px;
+                margin-left: -80px;
                 margin-top: 100px;
             }
             &:nth-child(2){
-                margin-left: -180px;
+                margin-top: 170px;
+                margin-left: -165px;
             }
             &:nth-child(3){
-                margin-left: -200px;
-                margin-top: 190px;
+                margin-left: -180px;
+                margin-top: 170px;
             }
             &:nth-child(4){
-                margin-left: -100px;
+                margin-left: -70px;
             }
             &:nth-child(5){
                 margin-top: -600px;
+                margin-left: 490px;
             }
             &:nth-child(6){
-                
+                margin-left: 590px;
+                margin-top: 170px;
             }
             &:nth-child(7){
-                
+                margin-left: 580px;
+                margin-top: 150px;
             }
             &:nth-child(8){
-                
+                margin-left: 500px;
+                margin-top: 140px;
+            }
+            @media screen and (max-width: 1200px){
+                &:nth-child(1){
+                    margin-top: 60px;
+                    margin-left: -70px;
+                }
+                &:nth-child(2){
+                    margin-top: 140px;
+                    margin-left: -140px;
+                    &::after{
+                        margin-left: 13px;
+                    }
+                    &::before{
+                        margin-left: 10px;
+                    }
+                }
+                &:nth-child(3){
+                    margin-left: -120px;
+                    margin-top: 140px;
+                }
+                &:nth-child(4){
+                    margin-left: -70px;
+                }
+                &:nth-child(5){
+                    margin-top: -580px;
+                    margin-left: 350px;
+                }
+                &:nth-child(6){
+                    margin-left: 420px;
+                    margin-top: 140px;
+                }
+                &:nth-child(7){
+                    margin-left: 400px;
+                }
+                &:nth-child(8){
+                    margin-left: 350px;
+                    margin-top: 140px;
+                }
+            }
+            @media screen and (max-width: 765px){
+                &:nth-child(1){
+                    margin-top: 0;
+                    margin-left: -50px;
+                }
+                &:nth-child(2){
+                    margin-top: -80px;
+                    margin-left: 130px;
+                    &::after{
+                        margin-left: 3px;
+                    }
+                    &::before{
+                        margin-left: 0;
+                    }
+                }
+                &:nth-child(3){
+                    margin-left: 300px;
+                    margin-top: 10px;
+                }
+                &:nth-child(4){
+                    margin-left: -50px;
+                    margin-top: 590px;
+                }
+                &:nth-child(5){
+                    margin-top: 20px;
+                    margin-left: 130px;
+                }
+                &:nth-child(6){
+                    margin-left: 310px;
+                    margin-top: -90px;
+                }
+                &:nth-child(7){
+                    margin-top: 230px;
+                    margin-left: 40px;
+                }
+                &:nth-child(8){
+                    margin-top: -25px;
+                    margin-left: 210px;
+                }
+            }
+            @media screen and (max-width: 568px){
+                &:nth-child(1){
+                    margin-top: -150px;
+                    margin-left: 50px;
+                }
+                &:nth-child(2){
+                    margin-top: 30px;
+                    margin-left: 160px;
+                }
+                &:nth-child(3){
+                    margin-left: 10px;
+                    margin-top: 10px;
+                }
+                &:nth-child(4){
+                    margin-left: 0;
+                    margin-top: 470px;
+                }
+                &:nth-child(5){
+                    margin-top: -40px;
+                    margin-left: 150px;
+                }
+                &:nth-child(6){
+                    margin-left: 70px;
+                    margin-top: 80px;
+                }
+                &:nth-child(7){
+                    margin-top: 85px;
+                    margin-left: 0;
+                }
+                &:nth-child(8){
+                    margin-top: -55px;
+                    margin-left: 170px;
+                }
             }
         }
     }    
