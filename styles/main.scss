@@ -59,7 +59,7 @@ h4{
     font-size: 18px;
 }
 .container {
-    //border: 1px dotted #ff000070;
+    border: 1px dotted #ff000070;
     position: relative;
     width: 1140px;
     left: 50%;
@@ -963,10 +963,9 @@ span.bold{
 .bold {
     font-weight: 700;
 }
-
-.advantages{
+.section.advantages{
     overflow-x: hidden;
-    &__title{
+    .advantages__title{
         margin-top: 100px;
         width: 550px;
         text-align: end;  
@@ -988,7 +987,7 @@ span.bold{
             }
         }
     }
-    &__image{
+    .advantages__image{
         @media screen and (max-width: 568px){
             img{
                 width: 280px;
@@ -997,7 +996,7 @@ span.bold{
             }
         }
     }
-    &__decor{
+    .advantages__decor{
         position: absolute;
         margin-top: -220px;
         margin-left: 150px;
@@ -1026,10 +1025,10 @@ span.bold{
             height: 1600px;
         }
         @media screen and (max-width: 576px){
-            height: 1400px;
+            height: 1600px;
         }
     }
-    &-wrapper{
+    .advantages-wrapper{
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1042,11 +1041,11 @@ span.bold{
             margin-top: 270px;
         }
     }
-    &__list {
+    .advantages__list {
         position: absolute;
         top: 0;
     }
-    &__button{
+    .advantages__button{
         position: absolute;
         bottom: 100px;
         left: 50%;
@@ -1459,6 +1458,9 @@ span.bold{
         }
     }
 
+    .swiper-wrapper{
+        transition-timing-function: linear;
+    }
     .swiper-container {
         .swiper-pagination-bullets {
             align-items: center;
@@ -1708,11 +1710,39 @@ span.bold{
         position: absolute;
         left: 0;
         top: 150px;
+        @media screen and (max-width: 1200px){
+            object-fit: contain;
+            object-position: center;
+            width: 800px;
+            top: 100px;
+            left: -50px;
+        }
+        @media screen and (max-width: 768px){
+            width: 500px;
+            top: 150px;
+        }
+        @media screen and (max-width: 568px){
+            width: 500px;
+            top: 80px;
+        }
     }
     &__decor-2 {
         position: absolute;
         right: -550px;
         bottom: -100px;
+        @media screen and (max-width: 1200px){
+            right: -300px;
+        }
+        @media screen and (max-width: 768px){
+            object-fit: contain;
+            object-position: center;
+            width: 1200px;
+            right: -350px;
+        }
+        @media screen and (max-width: 480px){
+            width: 1200px;
+            right: -450px;
+        }
     }
     &__title {
         padding: 50px;
@@ -1728,27 +1758,195 @@ span.bold{
         text-transform: uppercase;
         color: #fff;
         @media screen and (max-width: 1200px){
-            font-size: 36px;
+            font-size: 34px;
+        }
+        @media screen and (max-width: 768px){
+            font-size: 24px;
+        }
+        @media screen and (max-width: 568px){
+            font-size: 22px;
+            padding: 25px;
+            padding-left: 30vw;
         }
     }
     &__product {
-        margin-right: 25px;
+        margin-right: 40px;
         margin-bottom: -200px;
-        img{
-            width: 600px;
+        @media screen and (max-width: 1200px){
+            margin-bottom: -40px;
+            margin-right: 0;
+        }
+        .inner{
+            display: flex;
+            flex-direction: row;
+            position: relative;
+        }
+        
+    }
+    .product{
+        margin-top: -70px;
+        display: grid;
+        grid-template: auto / 480px auto ;
+        @media screen and (max-width: 1200px){
+            grid-template: repeat(3, auto) / 100%;
+            margin-top: 100px;
+        }
+        &__awards {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+        &__image {
+            width: 350px;
+            object-position: center;
+            object-fit: contain;
+            @media screen and (max-width: 480px){
+                width: 270px;
+            }
+        }
+        &__decor-1 {
+            position: absolute;
+            right: 10px;
+            bottom: -20px;
+            @media screen and (max-width: 1200px){
+                bottom: 100px;
+                right: -40px;
+            }
+            @media screen and (max-width: 768px){
+                margin-bottom: 10px;
+            }
+            @media screen and (max-width: 568px){
+                margin-top: 150px;
+            }
+            @media screen and (max-width: 480px){
+                bottom: -70px;
+            }
+        }
+        .inner{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            margin-right: -20px;
+            @media screen and (max-width: 1200px){
+                grid-column-start: 1;
+                grid-column-end: 2;
+                grid-row-start: 3;
+                grid-row-end: 4;
+                margin-right: 0;
+            }
+            @media screen and (max-width: 576px){
+                grid-column-start: 1;
+                grid-column-end: 2;
+                grid-row-start: 2;
+                grid-row-end: 3;
+            }
+        }
+        &__advantages {
+
+            margin-left: -50px;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            @media screen and (max-width: 1200px){
+                grid-column-start: 1;
+                grid-column-end: 2;
+                grid-row-start: 2;
+                grid-row-end: 3;
+                margin-left: 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+            }
+            @media screen and (max-width: 576px){
+                grid-column-start: 1;
+                grid-column-end: 2;
+                grid-row-start: 3;
+                grid-row-end: 4;
+                margin-top: 50px;
+            }
+            @media screen and (max-width: 480px){
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+    .awards {
+        margin-bottom: 27px;
+        @media screen and (max-width: 1200px){
+            justify-content: space-between;
+        }
+        @media screen and (max-width: 576px){
+            justify-content: center;
+            &__item{
+                &:not(:last-child){
+                    margin-right: 15px;
+                }
+                .award__img{
+                    width: 60px;
+                }
+            }
+        }
+    }
+    .advantage {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        &:not(:last-child){
+            margin-bottom: 20px;
+        }
+        @media screen and (max-width: 576px){
+            margin-bottom: 0;
+        }
+        &__image {
+            width: 50px;
+            height: 50px;
             object-fit: contain;
             object-position: center;
+            background: $orange-gradient;
+            border-radius: 50%;
+            padding: 10px;
         }
+        &__title {
+            width: 160px;
+            font-family: 'Oswald';
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 120%;
+            margin-top: 5px;
+            @media screen and (max-width: 576px){
+                width: 150px;
+            }
+            @media screen and (max-width: 480px){
+                width: 120px;
+                margin: 10px;
+            }
+        }
+    }
+    
+    &__form{
+        margin-right: 170px;
         @media screen and (max-width: 1200px){
-            margin-bottom: 0;
+            margin-right: 0;
+            align-self: flex-start;
+        }
+        @media screen and (max-width: 768px){
+            margin-bottom: 10px;
+        }
+        @media screen and (max-width: 568px){
             margin-top: 150px;
         }
     }
-    &__form{
-        margin-right: 170px;
-    }
     .container {
         padding-top: 200px;
+        @media screen and (max-width: 568px){
+            padding-top: 100px;
+        }
     }
     .wrapper {
         z-index: 1;

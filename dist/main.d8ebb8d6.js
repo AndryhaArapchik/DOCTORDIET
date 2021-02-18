@@ -11911,7 +11911,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var components = [_virtual.default, _keyboard.default, _mousewheel.default, _navigation.default, _pagination.default, _scrollbar.default, _parallax.default, _zoom.default, _lazy.default, _controller.default, _a11y.default, _history.default, _hashNavigation.default, _autoplay.default, _effectFade.default, _effectCube.default, _effectFlip.default, _effectCoverflow.default, _thumbs.default];
 
 _coreClass.default.use(components);
-},{"./esm/components/core/core-class":"node_modules/swiper/esm/components/core/core-class.js","./esm/components/virtual/virtual":"node_modules/swiper/esm/components/virtual/virtual.js","./esm/components/keyboard/keyboard":"node_modules/swiper/esm/components/keyboard/keyboard.js","./esm/components/mousewheel/mousewheel":"node_modules/swiper/esm/components/mousewheel/mousewheel.js","./esm/components/navigation/navigation":"node_modules/swiper/esm/components/navigation/navigation.js","./esm/components/pagination/pagination":"node_modules/swiper/esm/components/pagination/pagination.js","./esm/components/scrollbar/scrollbar":"node_modules/swiper/esm/components/scrollbar/scrollbar.js","./esm/components/parallax/parallax":"node_modules/swiper/esm/components/parallax/parallax.js","./esm/components/zoom/zoom":"node_modules/swiper/esm/components/zoom/zoom.js","./esm/components/lazy/lazy":"node_modules/swiper/esm/components/lazy/lazy.js","./esm/components/controller/controller":"node_modules/swiper/esm/components/controller/controller.js","./esm/components/a11y/a11y":"node_modules/swiper/esm/components/a11y/a11y.js","./esm/components/history/history":"node_modules/swiper/esm/components/history/history.js","./esm/components/hash-navigation/hash-navigation":"node_modules/swiper/esm/components/hash-navigation/hash-navigation.js","./esm/components/autoplay/autoplay":"node_modules/swiper/esm/components/autoplay/autoplay.js","./esm/components/effect-fade/effect-fade":"node_modules/swiper/esm/components/effect-fade/effect-fade.js","./esm/components/effect-cube/effect-cube":"node_modules/swiper/esm/components/effect-cube/effect-cube.js","./esm/components/effect-flip/effect-flip":"node_modules/swiper/esm/components/effect-flip/effect-flip.js","./esm/components/effect-coverflow/effect-coverflow":"node_modules/swiper/esm/components/effect-coverflow/effect-coverflow.js","./esm/components/thumbs/thumbs":"node_modules/swiper/esm/components/thumbs/thumbs.js"}],"C:/Users/andry/AppData/Roaming/npm/node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"./esm/components/core/core-class":"node_modules/swiper/esm/components/core/core-class.js","./esm/components/virtual/virtual":"node_modules/swiper/esm/components/virtual/virtual.js","./esm/components/keyboard/keyboard":"node_modules/swiper/esm/components/keyboard/keyboard.js","./esm/components/mousewheel/mousewheel":"node_modules/swiper/esm/components/mousewheel/mousewheel.js","./esm/components/navigation/navigation":"node_modules/swiper/esm/components/navigation/navigation.js","./esm/components/pagination/pagination":"node_modules/swiper/esm/components/pagination/pagination.js","./esm/components/scrollbar/scrollbar":"node_modules/swiper/esm/components/scrollbar/scrollbar.js","./esm/components/parallax/parallax":"node_modules/swiper/esm/components/parallax/parallax.js","./esm/components/zoom/zoom":"node_modules/swiper/esm/components/zoom/zoom.js","./esm/components/lazy/lazy":"node_modules/swiper/esm/components/lazy/lazy.js","./esm/components/controller/controller":"node_modules/swiper/esm/components/controller/controller.js","./esm/components/a11y/a11y":"node_modules/swiper/esm/components/a11y/a11y.js","./esm/components/history/history":"node_modules/swiper/esm/components/history/history.js","./esm/components/hash-navigation/hash-navigation":"node_modules/swiper/esm/components/hash-navigation/hash-navigation.js","./esm/components/autoplay/autoplay":"node_modules/swiper/esm/components/autoplay/autoplay.js","./esm/components/effect-fade/effect-fade":"node_modules/swiper/esm/components/effect-fade/effect-fade.js","./esm/components/effect-cube/effect-cube":"node_modules/swiper/esm/components/effect-cube/effect-cube.js","./esm/components/effect-flip/effect-flip":"node_modules/swiper/esm/components/effect-flip/effect-flip.js","./esm/components/effect-coverflow/effect-coverflow":"node_modules/swiper/esm/components/effect-coverflow/effect-coverflow.js","./esm/components/thumbs/thumbs":"node_modules/swiper/esm/components/thumbs/thumbs.js"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -11943,7 +11943,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],"C:/Users/andry/AppData/Roaming/npm/node_modules/parcel/src/builtins/css-loader.js":[function(require,module,exports) {
+},{}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -11978,12 +11978,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"C:/Users/andry/AppData/Roaming/npm/node_modules/parcel/src/builtins/bundle-url.js"}],"node_modules/swiper/swiper-bundle.css":[function(require,module,exports) {
+},{"./bundle-url":"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"node_modules/swiper/swiper-bundle.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"C:/Users/andry/AppData/Roaming/npm/node_modules/parcel/src/builtins/css-loader.js"}],"scripts/main.js":[function(require,module,exports) {
+},{"_css_loader":"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"scripts/main.js":[function(require,module,exports) {
 "use strict";
 
 var _bundle = _interopRequireDefault(require("swiper/bundle"));
@@ -12006,7 +12006,7 @@ function onLoad() {
     }
   });
 }
-},{"swiper/bundle":"node_modules/swiper/swiper-bundle.esm.js","swiper/swiper-bundle.css":"node_modules/swiper/swiper-bundle.css"}],"C:/Users/andry/AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"swiper/bundle":"node_modules/swiper/swiper-bundle.esm.js","swiper/swiper-bundle.css":"node_modules/swiper/swiper-bundle.css"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -12034,7 +12034,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59826" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53195" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -12210,5 +12210,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["C:/Users/andry/AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js","scripts/main.js"], null)
+},{}]},{},["../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","scripts/main.js"], null)
 //# sourceMappingURL=/main.d8ebb8d6.js.map
