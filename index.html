@@ -307,14 +307,66 @@
             </div>
         </section>
         <section class="summary">
+            <img src="assets/images/IMG__DECOR-6.png" alt="" class="summary__decor-1">
             <div class="container">
-
+                <img src="assets/images/IMG__GIRL-8.png" alt="" class="summary__decor-2">
+                <div class="summary__title">Готовы ли Вы увидеть в зеркале<br>фигуру, о которой давно мечтали?</div>
+                <div class="wrapper">
+                    <picture class="summary__product">
+                        <source media="(max-width: 765px)" srcset="assets/images/IMG__PRODUCT-2-3.png">
+                        <source media="(max-width: 1200px)" srcset="assets/images/IMG__PRODUCT-2-2.png">
+                        <img src="assets/images/IMG__PRODUCT-2.png" alt="">
+                    </picture>
+                    <form class="form summary__form form" action="/">
+                        <div class="form__title">
+                            <h4>Только сегодня</h4>
+                            <h3 class="accent">Акция – 50%</h3>
+                        </div>
+                        <span class="form__old-price"><span class="crossed">10800</span> kzt</span>
+                        <div class="form__price price">
+                            <span class="price__text text-before">Цена</span>
+                            <span class="price__text text-price">5400</span>
+                            <span class="price__text text-after">KZT</span>
+                        </div>
+                        <div class="form__timer timer">
+                            <span class="timer__info">До завершения Акции</span>
+                            <div class="timer-wrapper">
+                                <span class="timer__hours timer-item" data-title="часы">11</span>
+                                <span class="timer__minutes  timer-item" data-title="минуты">59</span>
+                                <span class="timer__seconds  timer-item" data-title="секунды">59</span>
+                            </div>   
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="country">Ваша страна</label>
+                            <select class="form__input select" name="country" id="country">
+                                <option value="kz">Казахстан</option>
+                                <option value="kz">Россия</option>
+                            </select>  
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="name">Ваше имя</label>
+                            <input class="form__input input" name="name" id="name" type="text">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="phone">Ваш телефон</label>
+                            <input class="form__input input" name="phone" id="phone" type="text">
+                        </div>
+                        <div class="button-wrapper">
+                            <button class="form__button button" type="submit">Заказать Сейчас</button>
+                            <div class="button-decor"></div>
+                        </div>
+                        <span class="form__info">* Оставляя контакты, вы соглашаетесь с
+                            политикой конфиденциальности</span>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
     <footer class="footer">
         <div class="container">
-
+            <span>Политика конфиденциальности</span>
+            <a href="#">Публичная оферта</a>
         </div>
     </footer>
     <script src="scripts/main.js"></script>
