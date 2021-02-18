@@ -1311,7 +1311,31 @@ span.bold {
 }
 
 .answers {
-  margin-top: 175px;
+  overflow-x: hidden;
+  position: relative;
+  padding-top: 150px;
+  padding-bottom: 50px;
+  margin-top: 70px;
+}
+.answers__decor-1 {
+  position: absolute;
+  top: 0;
+}
+.answers__decor-2 {
+  position: absolute;
+  right: 0;
+  top: 450px;
+}
+@media screen and (max-width: 1200px) {
+  .answers__decor-2 {
+    top: 1100px;
+    right: -50px;
+  }
+}
+@media screen and (max-width: 760px) {
+  .answers__decor-1, .answers__decor-2 {
+    display: none;
+  }
 }
 @media screen and (max-width: 570px) {
   .answers {
@@ -1903,6 +1927,187 @@ span.bold {
     margin-top: -55px;
     margin-left: 170px;
   }
+}
+
+.courses {
+  overflow: hidden;
+  padding-bottom: 100px;
+  position: relative;
+}
+.courses__decor-1 {
+  position: absolute;
+  bottom: 0;
+}
+@media screen and (max-width: 1200px) {
+  .courses__decor-1 {
+    bottom: auto;
+    top: 130px;
+  }
+}
+.courses__decor-2 {
+  position: absolute;
+  right: -440px;
+}
+@media screen and (max-width: 1500px) {
+  .courses__decor-2 {
+    right: -340px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .courses__decor-2 {
+    bottom: 0;
+    right: 0;
+    object-fit: contain;
+    object-position: center;
+    width: 320px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .courses__decor-2 {
+    bottom: 20px;
+    right: -250px;
+    width: 520px;
+  }
+}
+.courses__title {
+  font-size: 72px;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+.courses__list {
+  margin-top: 60px;
+}
+@media screen and (max-width: 1200px) {
+  .courses__list {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .courses__list {
+    margin-top: 20px;
+  }
+}
+.courses__remark {
+  color: #FF1400;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-top: 40px;
+  text-align: center;
+  z-index: 1;
+}
+.courses .list {
+  display: flex;
+}
+@media screen and (max-width: 1200px) {
+  .courses .list {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 480px) {
+  .courses .list {
+    justify-content: center;
+  }
+}
+.courses .list__item:not(:last-child) {
+  margin-right: 25px;
+}
+@media screen and (max-width: 1200px) {
+  .courses .list__item {
+    margin-top: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .courses .list__item {
+    margin-top: 40px;
+    margin-left: 25px;
+  }
+  .courses .list__item:not(:last-child) {
+    margin-right: 0;
+  }
+  .courses .list__item:nth-child(2n+1) {
+    margin-right: 25px;
+  }
+}
+@media screen and (max-width: 568px) {
+  .courses .list__item {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .courses .list__item {
+    justify-content: center;
+  }
+  .courses .list__item:nth-child(2n+1) {
+    margin-right: 0;
+  }
+}
+.courses .course {
+  font-family: "Oswald";
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 195px;
+  text-align: center;
+  position: relative;
+  padding: 15px 7px 100px 7px;
+  background-color: #DEF1FF;
+  border-radius: 5px;
+}
+.courses .course:nth-child(3), .courses .course:nth-child(4), .courses .course:nth-child(5) {
+  background-color: #008CCF;
+  color: #fff;
+}
+.courses .course:nth-child(3) .course__term, .courses .course:nth-child(4) .course__term, .courses .course:nth-child(5) .course__term {
+  color: #98F3FF;
+}
+.courses .course:nth-child(5)::before {
+  content: "";
+  width: 36px;
+  height: 36px;
+  background: url("/ICON__APPLY.f499310c.svg");
+  position: absolute;
+  left: 5px;
+  top: 50px;
+}
+.courses .course:nth-child(2) .course__title {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+.courses .course__title {
+  font-size: 20px;
+  line-height: 110%;
+  height: 44px;
+  margin-top: 15px;
+}
+.courses .course__image {
+  object-fit: contain;
+  object-position: top;
+  height: 110px;
+  width: 80px;
+}
+.courses .course__term {
+  font-size: 36px;
+  line-height: 130%;
+}
+.courses .course__target-title {
+  font-size: 24px;
+  line-height: 120%;
+}
+.courses .course__target-value {
+  font-size: 48px;
+  line-height: 110%;
+}
+.courses .course__button {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 35px;
+  width: 170px;
+}
+.courses .course__button button {
+  padding: 10px;
 }
 
 /*# sourceMappingURL=/main.48b3db1d.css.map */
