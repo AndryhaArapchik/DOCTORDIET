@@ -969,7 +969,7 @@ span.bold{
         margin-top: 100px;
         width: 550px;
         text-align: end;  
-        
+        z-index: 1;
         h3{
             font-size: 36px;
             line-height: 110%;
@@ -1021,11 +1021,14 @@ span.bold{
     }
     .container{
         height: 1100px;
-        @media screen and (max-width: 765px){
-            height: 1600px;
+        @media screen and (max-width: 768px){
+            height: 1700px;
+        }
+        @media screen and (max-width: 570px){
+            height: 1450px;
         }
         @media screen and (max-width: 576px){
-            height: 1600px;
+            height: 1400;
         }
     }
     .advantages-wrapper{
@@ -1638,6 +1641,8 @@ span.bold{
         }
         @media screen and (max-width: 480px){
             top: 250px;
+            width: 530px;
+            margin-left: -150px;
         }
     }
     &__description {
@@ -1665,7 +1670,7 @@ span.bold{
                 top: 530px;
             }
             @media screen and (max-width: 480px){
-                top: 750px;
+                top: 650px;
             }
         }
         &__subtitle {
@@ -1677,7 +1682,7 @@ span.bold{
                 margin-bottom: 700px;
             }
             @media screen and (max-width: 768px){
-                margin-bottom: 550px;
+                margin-bottom: 450px;
             }
         }
         &__body {
