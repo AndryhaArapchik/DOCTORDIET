@@ -2140,6 +2140,10 @@ span.bold{
             @media screen and (max-width: 950px){
                 font-size: 48px;
             }
+            @media screen and (max-width: 570px){
+                font-size: 36px;
+                line-height: 100%;
+            }
         }
         h3{
             display: block;
@@ -2194,9 +2198,18 @@ span.bold{
 
 .videos__slider{
     border-radius: 15px;
-    .player,
-    .plyr{
+    iframe{
         border-radius: 15px;
+        height: 600px;
+        @media screen and (max-width: 1200px){
+            height: 500px;
+        }
+        @media screen and (max-width: 765px){
+            height: 350px;
+        }
+        @media screen and (max-width: 480px){
+            height: 250px;
+        }
     }
     @media screen and (max-width: 480px){
         margin-left: -50px;

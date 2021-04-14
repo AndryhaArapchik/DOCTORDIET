@@ -1,6 +1,6 @@
  import Swiper from 'swiper/bundle';
  import 'swiper/swiper-bundle.css';
- import Plyr from 'plyr/dist/plyr.polyfilled';
+ import Plyr from 'plyr/dist/plyr';
  import 'plyr/dist/plyr.css';
 
 document.addEventListener('DOMContentLoaded', onLoad);
@@ -35,10 +35,7 @@ function onLoad(){
         on:{
           slideChange: (swiper) => {
             const activeSlide = swiper.slides[swiper.realIndex];
-            const player = activeSlide.querySelector('.player');
-            if(player)
-              initPlayer(player);
-            players.forEach(p => p.pause());
+            callPlayer("pauseVideo");
           }
         }
     });
@@ -59,4 +56,20 @@ function initPlayer(element){
     }
   });
   players.push(player);
+}
+
+function callPlayer(func, args) {
+  var i = 0,
+      iframes = document.getElementsByTagName('iframe'),
+      src = '';
+  for (i = 0; i < iframes.length; i += 1) {
+      src = iframes[i].getAttribute('src');
+      if (src && src.indexOf('youtube.com/embed') !== -1) {
+          iframes[i].contentWindow.postMessage(JSON.stringify({
+              'event': 'command',
+              'func': func,
+              'args': args || []
+          }), '*');
+      }
+  }
 }
