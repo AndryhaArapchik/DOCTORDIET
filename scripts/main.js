@@ -1,5 +1,6 @@
  import Swiper from 'swiper/bundle';
  import 'swiper/swiper-bundle.css';
+ import Plyr from 'plyr/dist/plyr.polyfilled';
  import 'plyr/dist/plyr.css';
 
 document.addEventListener('DOMContentLoaded', onLoad);
@@ -30,7 +31,32 @@ function onLoad(){
         },
         thumbs: {
           swiper: galleryThumbs
+        },
+        on:{
+          slideChange: (swiper) => {
+            const activeSlide = swiper.slides[swiper.realIndex];
+            const player = activeSlide.querySelector('.player');
+            if(player)
+              initPlayer(player);
+            players.forEach(p => p.pause());
+          }
         }
     });
-    const player = new Plyr('.player');
+    const firstPlayer = document.querySelector('.player');
+    initPlayer(firstPlayer);
+}
+
+const players = [];
+
+function initPlayer(element){
+  const player = new Plyr(element, {
+    youtube: { 
+      noCookie: false, 
+      rel: 0, 
+      showinfo: 0, 
+      iv_load_policy: 3, 
+      modestbranding: 1 
+    }
+  });
+  players.push(player);
 }

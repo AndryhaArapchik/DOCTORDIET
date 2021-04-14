@@ -1977,7 +1977,6 @@ span.bold{
         transform: rotate(180deg) scale(1.2);
         right: 0;
         bottom: 0;
-        
     }
     
     @media screen and (max-width: 765px){
@@ -2116,24 +2115,112 @@ span.bold{
         }
     }
 }
-
+.videos{
+    position: relative;
+    overflow: hidden;
+    padding: 50px 0;
+    background:linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,80%) 45%, rgba(255,255,255,1) 100%), url('../assets/images/IMG__VIDEOS.jpg') no-repeat center / cover ;
+    &__title {
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 400%;
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media screen and (max-width: 950px){
+            line-height: 320%;
+            margin-bottom: 30px;
+        }
+        @media screen and (max-width: 765px){
+            text-align: center;
+        }
+        h2{
+            font-size: 64px;
+            @media screen and (max-width: 950px){
+                font-size: 48px;
+            }
+        }
+        h3{
+            display: block;
+            max-width: 450px;
+            font-size: 36px;
+            line-height: 100%;
+            text-transform: lowercase;
+            @media screen and (max-width: 950px){
+                font-size: 26px;
+                max-width: 300px;
+            }
+            @media screen and (max-width: 765px){
+                max-width: unset;
+            }
+        }
+    }
+    .swiper-button-prev.swiper-button-white, .swiper-button-next.swiper-button-white{
+        --swiper-navigation-color: #ffffff70;
+        outline: none;
+        border: none;
+    }
+}
 .gallery-top {
     height: 80%;
     width: 100%;
+    margin-bottom: 10px;
+    border-radius: 15px;
 }
 
 .gallery-thumbs {
     height: 20%;
     box-sizing: border-box;
     padding: 10px 0;
+    margin-bottom: 50px;
+    @media screen and (max-width: 765px){
+        margin-bottom: 30px;
+    }
 }
 
 .gallery-thumbs .swiper-slide {
     width: 25%;
     height: 100%;
     opacity: 0.4;
+    img{
+        border-radius: 15px;
+    }
 }
 
 .gallery-thumbs .swiper-slide-thumb-active {
     opacity: 1;
+}
+
+.videos__slider{
+    border-radius: 15px;
+    .player,
+    .plyr{
+        border-radius: 15px;
+    }
+    @media screen and (max-width: 480px){
+        margin-left: -50px;
+        margin-right: -50px;
+    }
+    @media screen and (max-width: 385px){
+        margin-left: -40px;
+        margin-right: -40px;
+    }
+    @media screen and (max-width: 365px){
+        margin-left: -30px;
+        margin-right: -30px;
+    }
+    @media screen and (max-width: 345px){
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+}
+.gallery-thumbs__img{
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
+    height: 150px;
+    @media screen and (max-width: 765px){
+        height: 80px;
+    }
 }
