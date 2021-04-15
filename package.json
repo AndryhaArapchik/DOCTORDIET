@@ -5,7 +5,6 @@
   },
   "dependencies": {
     "normalize.css": "^8.0.1",
-    "plyr": "^3.6.4",
     "swiper": "^6.4.14"
   }
 }

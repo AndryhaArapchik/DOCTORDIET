@@ -1,7 +1,5 @@
  import Swiper from 'swiper/bundle';
  import 'swiper/swiper-bundle.css';
- import Plyr from 'plyr/dist/plyr';
- import 'plyr/dist/plyr.css';
 
 document.addEventListener('DOMContentLoaded', onLoad);
 
@@ -34,28 +32,10 @@ function onLoad(){
         },
         on:{
           slideChange: (swiper) => {
-            const activeSlide = swiper.slides[swiper.realIndex];
             callPlayer("pauseVideo");
           }
         }
     });
-    const firstPlayer = document.querySelector('.player');
-    initPlayer(firstPlayer);
-}
-
-const players = [];
-
-function initPlayer(element){
-  const player = new Plyr(element, {
-    youtube: { 
-      noCookie: false, 
-      rel: 0, 
-      showinfo: 0, 
-      iv_load_policy: 3, 
-      modestbranding: 1 
-    }
-  });
-  players.push(player);
 }
 
 function callPlayer(func, args) {
