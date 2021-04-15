@@ -2080,12 +2080,11 @@ span.bold{
             width: 750px;
         }
         @media screen and (max-width: 765px){
-            position: unset;
+            position: relative;
             
-            margin-top: 50px;
+            padding-top: 50px;
             margin-left: -120px;
-            margin-bottom: -180px;
-            object-position: top;
+            object-position: -120px;
         }
         @media screen and (max-width: 570px){
             margin-left: -150px;
@@ -2108,11 +2107,9 @@ span.bold{
             height: 500px;
         }
         @media screen and (max-width: 765px){
-            height: 800px;
+            height: auto;
         }
-        @media screen and (max-width: 570px){
-            height: 850px;
-        }
+
     }
 }
 .videos{
