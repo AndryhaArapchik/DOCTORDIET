@@ -36,6 +36,21 @@ function onLoad(){
           }
         }
     });
+    document.querySelectorAll('.course__video')
+      .forEach(x=>x.addEventListener('click', e => {
+          const url = e.currentTarget.closest('.course__video').dataset.src + '?enablejsapi=1';
+          const modal = document.createElement('div');
+          modal.classList.add('modal');
+          const bg = document.createElement('div');
+          bg.classList.add('bg');
+          bg.addEventListener('click', c => c.currentTarget.closest('.modal').outerHTML = '');
+          const video = document.createElement('div');
+          video.classList.add('modal-video');
+          video.innerHTML = `<iframe width="100%" height="100%" src="${url}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+          modal.appendChild(bg);
+          modal.appendChild(video);
+          document.body.appendChild(modal);
+      }));
 }
 
 function callPlayer(func, args) {
